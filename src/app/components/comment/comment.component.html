@@ -1,0 +1,11 @@
+
+<div class="inner-comment">
+  <div *ngIf="comment.editable" class="submitting">
+    <textarea [(ngModel)]="comment.text" type="text" maxlength="30"></textarea>
+    <button (click)="onClickComment()" type="button">Save</button>
+  </div>
+  <div *ngIf="!comment.editable" class="submitted">
+    <span>{{ comment.text }}</span>
+    <button (click)="onEditComment()" type="button">edit</button>    
+  </div>
+</div>

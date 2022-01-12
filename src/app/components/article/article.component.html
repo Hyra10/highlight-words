@@ -1,0 +1,15 @@
+<div class="wrapper">
+  <div appTextSelect class="article">
+    <div class="inner-article" [innerHTML]="articleInnerHtml"></div>
+    <app-tooltip *ngIf="showTooltip" [hostData]="highlightedEvent.hostData" ></app-tooltip>
+  </div>
+
+  <div class="comment">
+    <app-comment 
+      *ngFor="let data of this.repo.allStorageData"
+      [comment]="data.comment"
+      [hostData]="data.hostData"
+    ></app-comment>
+  </div>
+
+</div>

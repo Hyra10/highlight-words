@@ -1,0 +1,11 @@
+
+
+<div class="toolbar" role="banner">
+  <button *ngIf="isUserAuthenticated" (click)="onLogOut()">Log Out</button>
+</div>
+
+<div class="content" role="main">
+
+  <router-outlet></router-outlet>
+
+</div>

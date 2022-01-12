@@ -1,0 +1,28 @@
+<div class="form">
+  <h4>Register</h4>
+
+  <form class="loginbox" autocomplete="off" #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <input
+      placeholder="Email"
+      type="text"
+      id="email"
+      name="email"
+      ngModel
+      required
+      email
+    />
+    <input
+      placeholder="Password"
+      type="password"
+      id="password"
+      name="password"
+      ngModel
+      required
+    />
+    <button [disabled]="!f.valid">Register</button>
+  </form>
+  <div class="info">
+    <p>Already have an account? <a routerLink="/login">Login here</a></p>
+    <p>Forgot your password? <a routerLink="/forgot-password">Click here</a></p>
+  </div>
+</div>

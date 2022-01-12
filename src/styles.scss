@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.inner-article .highlighted { // could have used encapsulation on article too
+  background-color: rgb(173, 255, 207)
+};
